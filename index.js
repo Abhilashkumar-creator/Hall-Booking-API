@@ -7,7 +7,7 @@ const app = express();
 
 
 app.use(bodyParser.json());
-const port = 8000
+const port = process.env.PORT || 3000;
 
 
 app.listen(port, () => {
@@ -22,7 +22,10 @@ let time_regex = /^(0[0-9]|1\d|2[0-3])\:(00)/;
 
 
 app.get('/', (req, res) => {
-  res.send('welcome to Hall booking')
+//   res.send('welcome to Hall booking')
+res.json({
+    output: "Homepage"
+});
 })
 
 app.get('/getAllRooms', (req, res) => {
