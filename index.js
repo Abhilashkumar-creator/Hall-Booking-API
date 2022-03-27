@@ -22,10 +22,10 @@ let time_regex = /^(0[0-9]|1\d|2[0-3])\:(00)/;
 
 
 app.get('/', (req, res) => {
-//   res.send('welcome to Hall booking')
-res.json({
-    output: "Homepage"
-});
+  res.send('welcome to Hall booking')
+// res.json({
+//     output: "Homepage"
+// });
 })
 
 app.get('/getAllRooms', (req, res) => {
